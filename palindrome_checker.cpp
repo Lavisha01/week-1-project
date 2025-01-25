@@ -4,6 +4,11 @@ using namespace std;
 int palindrome(int n){
     int original, reversed =0; 
     original = n;
+    if (n<0 || (n%10 == 0 && n!=0))
+    {
+        cout<<"not  a palindrome"<<endl;
+        return false;
+    }
     
     while (n !=0){
         reversed = reversed*10 + (n%10);
